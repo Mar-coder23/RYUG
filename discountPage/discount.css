@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.main-container{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+.task-bar{
+    height: 4em;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    height: 8em;
+    margin-left: 10em;
+    margin-top: 4.1em;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 6em;
+}
+nav ul li a{
+     text-decoration: none;
+     color: rgb(252, 104, 19);
+     padding: 1.6em;
+     font-size: 1em;
+     font-family: "Anton", sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 1.4px;
+     transition: .2s ease-in;
+     text-shadow: 0px 2px 6px rgb(182, 179, 179);
+}
+nav ul li a:hover{
+    text-shadow: 0px 2px 5px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+nav ul li a:active{
+    color: rgb(252, 131, 19);
+}
+.main-content{
+    height: calc(100vh - 4em);
+    width: 100%;
+    background: linear-gradient(90deg, hsla(29, 92%, 70%, 1) 0%, rgb(241, 149, 113) 100%);
+}
+footer{
+    height: 7em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer nav{
+    padding-right: 6em;
+    
+}
+.copyright{
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1em;
+}
+.search-bar{
+    position: relative;
+    padding-right: 8em;
+}
+.search-bar input{
+    width: 20em;
+    border-radius: 25px;
+    padding: .5em;
+    border: 1px solid rgb(245, 113, 51);
+    padding-left: 2.8em;
+    outline: none;
+}
+.fa-magnifying-glass{
+    position: absolute;
+    z-index: 1002;
+    top: 0.5em;
+    left: .5em;
+    color: rgb(228, 102, 57);
+}
+.fake-ad-container{
+    height: 14em;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fake-ad{
+    height: 10em;
+    width: 40em;
+    background-color: white;
+    position: relative;
+}
+
+.fake-ad img{
+    height: 10em;
+    width: 40em;
+}
+.count-words{
+    color: black;
+}
+.ad-thanks{
+    position: absolute;
+    top: 0.7em;
+    left: 2.3em;
+    font-size: 2.2em;
+    font-family: Poppins;
+    color: rgb(253, 41, 253);
+    z-index: 2; 
+    font-family: "Anton", sans-serif;
+    text-shadow: 0px 2px 5px black;
+}
+.ad-discount{
+    position: absolute;
+    top: 5em;
+    left: 8.8em;
+    font-size: 1em;
+    font-family: Roboto;
+    color: white;
+    text-shadow: 0px 2px 5px black;
+    z-index: 2; 
+}
+.ad-btn{
+    position: absolute;
+    top: 7em;
+    left: 14.3em;
+    font-size: 1em;
+    font-family: Roboto;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, rgb(238, 46, 228) 0%, rgb(158, 67, 248) 100%);
+    padding: .5em 1em;
+    border-radius: 5px;
+    text-shadow: 0px 2px 5px black;
+    box-shadow: 0px 0px 10px black;
+    z-index: 2; 
+}
+.fake-ad::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1; 
+}
+.ad-10{
+    color: rgb(253, 41, 253);
+}
+
+
+.discount-section {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  margin: 1em auto;
+}
+.discount-section 
+.tiles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1.9em;
+}
+.discount-title{
+    font-family: "Anton", sans-serif;
+    color: white;
+    font-size: 2em;
+}
+.discount-desc{
+    font-family: Roboto;
+    color: rgb(255, 252, 49);
+}
+.tile {
+  width: 6em;
+  height: 6em;
+  background: rgb(255, 62, 28);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.tile.flipped {
+  transform: rotateY(180deg);
+}
+.tile .front,
+.tile .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+.tile .front {
+  background: rgb(255, 62, 28);
+  color: white;
+}
+.tile .back {
+  background: rgb(238, 46, 228);
+  color: white;
+  transform: rotateY(180deg);
+}

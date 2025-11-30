@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.main-container{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+.task-bar{
+    height: 4em;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    height: 8em;
+    margin-left: 10em;
+    margin-top: 4.1em;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-left: 6em;
+}
+nav ul li a{
+     text-decoration: none;
+     color: rgb(252, 104, 19);
+     padding: 1.6em;
+     font-size: 1em;
+     font-family: "Anton", sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 1.4px;
+     transition: .2s ease-in;
+     text-shadow: 0px 2px 6px rgb(182, 179, 179);
+}
+nav ul li a:hover{
+    text-shadow: 0px 2px 5px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+nav ul li a:active{
+    color: rgb(252, 131, 19);
+}
+.main-content{
+    height: calc(100vh - 4em);
+    width: 100%;
+    background: linear-gradient(90deg, hsla(29, 92%, 70%, 1) 0%, rgb(241, 149, 113) 100%);
+}
+footer{
+    height: 7em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+footer nav{
+    padding-right: 6em;
+    
+}
+.copyright{
+    font-weight: 300;
+    text-align: center;
+    padding-top: 1em;
+}
+.search-bar{
+    position: relative;
+    padding-right: 8em;
+}
+.search-bar input{
+    width: 20em;
+    border-radius: 25px;
+    padding: .5em;
+    border: 1px solid rgb(245, 113, 51);
+    padding-left: 2.8em;
+    outline: none;
+}
+.fa-magnifying-glass{
+    position: absolute;
+    z-index: 1002;
+    top: 0.5em;
+    left: .5em;
+    color: rgb(228, 102, 57);
+}
+.fake-ad-container{
+    height: 16em;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fake-ad{
+    height: 10em;
+    width: 40em;
+    background-color: white;
+    position: relative;
+}
+
+.fake-ad img{
+    height: 10em;
+    width: 40em;
+}
+.count-words{
+    color: black;
+}
+.ad-sellers{
+    position: absolute;
+    top: 1em;
+    left: 4.5em;
+    line-height: 1.3em;
+    text-align: center;
+    font-size: 1.8em;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 5px black;
+    font-family: "Anton", sans-serif;
+    
+}
+.ad-btn{
+    position: absolute;
+    top: 7em;
+    left: 15em;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(153, 11, 230) 30%, rgb(238, 13, 159) 100%);
+    padding: .5em 1em;
+    border-radius: 5px;
+    text-shadow: 0px 2px 5px black;
+    box-shadow: 0px 0px 10px rgb(51, 51, 51);
+    font-family: Roboto;
+}
+
+.contact-section {
+  width: 80%;
+  margin: 0em auto;
+  font-family: Roboto;
+}
+.contact-section p {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #333;
+  font-size: 1.8em;
+}
+.contact-table {
+  width: 40%;
+  max-width: 44em;
+  margin: 0 28em;
+  background: white;
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+.contact-table td {
+  padding: .4em .6em;
+  display: block;
+}
+.contact-table label {
+  font-weight: 600;
+  color: #333;
+}
+.contact-table input,
+.contact-table textarea {
+  width: 100%;
+  padding: .8em;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  transition: border 0.3s;
+  font-size: .9em;
+}
+.contact-table input:focus,
+.contact-table textarea:focus {
+  border-color: rgb(255, 62, 28);
+  outline: none;
+  background: white;
+}
+.send-btn {
+  background-color: rgb(255, 62, 28);
+  color: white;
+  border: none;
+  padding: .8em 1.1em;
+  font-size: 1em;
+  cursor: pointer;
+  text-shadow: 0px 2px 5px black;
+  box-shadow: 0px 2px 5px rgb(37, 37, 37);
+  transition: 0.3s;
+}
+.send-btn:hover {
+  background-color: rgb(185, 49, 25);
+}
+.send-btn:active{
+    background-color: rgb(255, 62, 28);
+}
+@media (max-width: 600px) {
+  .contact-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .contact-table tr {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .contact-table td:first-child {
+    margin-bottom: 5px;
+  }
+}
